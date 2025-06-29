@@ -19,9 +19,9 @@ aws cloudformation wait stack-delete-complete --stack-name calculator-api
 
 # Empty and delete the S3 bucket
 echo "Emptying S3 bucket..."
-# aws s3 rm s3://$BUCKET_NAME --recursive
+aws s3 rm s3://$BUCKET_NAME --recursive
 
 echo "Deleting S3 bucket..."
-# aws s3api delete-bucket --bucket $BUCKET_NAME
+aws s3api delete-bucket --bucket $BUCKET_NAME
 
 echo "Cleanup complete!"
